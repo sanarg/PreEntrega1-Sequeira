@@ -4,7 +4,7 @@ const Alert = () => {
   return (
 
     <div class="alert al ert-info" role="alert">
-        {props.textAlert}
+        
     </div>
 
   )

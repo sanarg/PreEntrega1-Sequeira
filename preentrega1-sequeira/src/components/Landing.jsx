@@ -1,17 +1,18 @@
 import React from 'react'
-import Alert from './Alert/Alert'
 import ItemListContainer from './Navbar/ItemListContainer'
-import Navbar from './Navbar/Navbar'
+import { NavbarComponent } from './Navbar/Navbar'
+
 
 const Landing = () => {
   return (
 <>
     
     
-    <Navbar />
+    <NavbarComponent />
 
-    <ItemListContainer texto='PrivateStore' />
-
+    <div class="alert alert-info" role="alert" >
+      <ItemListContainer greeting='Aca va a ir toda la info sobre la web' />
+    </div>
 
 </>    
   )

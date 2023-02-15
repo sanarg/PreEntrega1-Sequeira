@@ -1,35 +1,28 @@
 import React from 'react';
-import Cartwidget from '../Cartwidget';
+import Cartwidget from '../Cartwidget/Cartwidget.jsx';
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-export const Navbar = () => {
+export const NavbarComponent = () => {
   return (
-    <>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">PrivateStore</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Questions</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Pricing</a>
-      </li>
-      <li>
-        <a class="nav-link" href="#">
+    <Navbar bg="light" expand="lg">
+      <Container>
+        <Navbar.Brand href="#home">Private Store</Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto">
+            <Nav.Link href="#home">Home</Nav.Link>
+            <Nav.Link href="#link">Pricing</Nav.Link>
+            <Nav.Link href="#link">About</Nav.Link>
             <Cartwidget />
-        </a>
-      </li>
-    </ul>
-  </div>
-</nav>
-</>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
+
   )
 }
 

@@ -1,9 +1,9 @@
 import React from 'react'
-import Alert from '../Alert/Alert'
 
 const ItemListContainer = (props) => {
   return (
-    <Alert textAlert={props.greeting}/>
+
+    <h2 class="d-flex justify-content-center">{props.greeting}</h2>
 
   )
 }
